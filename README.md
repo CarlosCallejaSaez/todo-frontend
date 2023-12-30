@@ -1,8 +1,23 @@
-# React + Vite
+# ToDo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[🚀Deploy Netlify](https://astounding-swan-db9bca.netlify.app/)
 
-Currently, two official plugins are available:
+[⚠⚠ Backend Repository](https://github.com/CarlosCallejaSaez/todo-backend-python)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[⚠⚠ Backend Render](https://todo-backend-co15.onrender.com)
+
+
+The ToDo App is a full stack app, a simple task management application that enables you to organize your tasks effectively.
+
+## Features
+
+- **Add Task:** Add new tasks with a title and description.
+- **Delete Task:** Remove tasks that you no longer need.
+- **Edit Task:** Modify the description of an existing task.
+- **Task List:** View all your tasks in an easy-to-read list.
+
+## Technologies Used
+
+- React.js for the user interface.
+- Axios for making HTTP requests to the server.
+- Tailwind CSS for quick and customizable styling.
