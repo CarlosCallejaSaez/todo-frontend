@@ -48,9 +48,9 @@ function App() {
         <h1 className="text-4xl font-bold mb-4 text-blue-600">ToDo APP</h1>
         <div className='log-buttons'>
           {!isAuthenticated ? (
-            <button onClick={() => loginWithRedirect()}>Log in</button>
+            <button className='bg-blue-500 text-white px-4 py-2 rounded'    onClick={() => loginWithRedirect()}>Log in</button>
           ) : (
-            <button onClick={() => logout()}>Log out</button>
+            <button className='bg-red-500 text-white px-4 py-2 rounded' onClick={() => logout()}>Log out</button>
           )}
         </div>
 
