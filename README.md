@@ -21,3 +21,6 @@ The ToDo App is a full stack app, a simple task management application that enab
 - React.js for the user interface.
 - Axios for making HTTP requests to the server.
 - Tailwind CSS for quick and customizable styling.
+
+
+https://github.com/CarlosCallejaSaez/todo-frontend/assets/96349988/9e0a56d5-f5ff-43b8-b0a5-1522a2ef5d2f
