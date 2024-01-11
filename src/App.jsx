@@ -11,6 +11,7 @@ function App() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [loading, setLoading] = useState(true);
+  const [alternativeLogin, setAlternativeLogin] = useState(false);
 
   useEffect(() => {
     axios.get(BASE_URL + 'todo')
@@ -27,10 +28,10 @@ function App() {
   const addTodoHandler = () => {
     const newTodo = { 'title': title, 'description': description };
 
-    
+
     setTodoArray([...todoArray, newTodo]);
 
-    
+
     axios.post(BASE_URL + 'todo', newTodo)
       .then((res) => {
         setTitle('');
@@ -38,7 +39,7 @@ function App() {
       })
       .catch(err => {
         console.error('Error adding todo:', err);
-        
+
       });
   };
 
@@ -48,14 +49,25 @@ function App() {
         <h1 className="text-4xl font-bold mb-4 text-blue-600">ToDo APP</h1>
         <div className='log-buttons'>
           {!isAuthenticated ? (
-            <button className='bg-blue-500 text-white px-4 py-2 rounded'    onClick={() => loginWithRedirect()}>Log in</button>
+            <>
+              <button className='bg-blue-500 text-white px-4 py-2 rounded' onClick={() => loginWithRedirect()}>Log in</button>
+              
+              <p style={{ textAlign: 'center', marginTop: '50px' }}>
+                for this demo version, if you don't want to log in, you can click the next button to view the app
+              </p>
+
+              <div style={{ textAlign: 'center', marginTop: '50px' }} >
+                <button style={{ width: '100px', height: '75px', backgroundColor: "aquamarine" }} onClick={() => setAlternativeLogin(true)}>Alternative Login</button>
+
+              </div>
+            </>
           ) : (
             <button className='bg-red-500 text-white px-4 py-2 rounded' onClick={() => logout()}>Log out</button>
           )}
         </div>
 
         <div className="p-6 w-full rounded-lg ">
-          {isAuthenticated && (
+          {(isAuthenticated || alternativeLogin) && (
             <>
               <h3 className="text-2xl font-bold mb-4 text-gray-800">Add your ToDo</h3>
               <form className="flex flex-col items-center mb-6">
