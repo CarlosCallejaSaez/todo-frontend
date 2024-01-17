@@ -5,7 +5,11 @@
   text-align: center;
 }
 
-  
+.yt-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .logo {
   height: 6em;
